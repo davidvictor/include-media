@@ -6,7 +6,7 @@
 /// @return {Boolean} - Returns true if the conditions are intercepted by the static breakpoint
 ///
 @function im-intercepts-static-breakpoint($conditions...) {
-  $no-media-breakpoint-value: map-get($breakpoints, $im-no-media-breakpoint);
+  $no-media-breakpoint-value: map-get($im-breakpoints, $im-no-media-breakpoint);
 
   @if not $no-media-breakpoint-value {
     @if log('`#{$im-no-media-breakpoint}` is not a valid breakpoint.') {}

@@ -38,16 +38,16 @@
 ///
 @mixin media-context($tweakpoints: (), $tweak-media-expressions: ()) {
   // Save global configuration
-  $global-breakpoints: $breakpoints;
+  $global-breakpoints: $im-breakpoints;
   $global-media-expressions: $media-expressions;
 
   // Update global configuration
-  $breakpoints: map-merge($breakpoints, $tweakpoints) !global;
+	$im-breakpoints: map-merge($im-breakpoints, $tweakpoints) !global;
   $media-expressions: map-merge($media-expressions, $tweak-media-expressions) !global;
 
   @content;
 
   // Restore global configuration
-  $breakpoints: $global-breakpoints !global;
+	$im-breakpoints: $global-breakpoints !global;
   $media-expressions: $global-media-expressions !global;
 }
